@@ -1,0 +1,4 @@
+gcs_bucket: tf-state-project-factory-1cea
+gcs_prefix: tf-factory
+gcp_billing_account_id: 0131D6-94FD9F-065EAB
+factory_root: folders/843077510615

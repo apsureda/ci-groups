@@ -1,0 +1,60 @@
+log_config:
+
+###########################################################
+# Billing account sink
+###########################################################
+- billing_account: 0131D6-94FD9F-065EAB
+  type: sink
+  name: billing-sink
+  # Destination types:
+  # storage.googleapis.com/[GCS_BUCKET]
+  # bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]
+  # pubsub.googleapis.com/projects/[PROJECT_ID]/topics/[TOPIC_ID]
+  destination: storage.googleapis.com/factory-log-sink-tests
+  filter: resource.type = gce_instance AND severity >= WARNING
+
+###########################################################
+# Organization log sink
+###########################################################
+- organization: 116143322321
+  type: sink
+  name: organization-sink
+  destination: bigquery.googleapis.com/projects/my-project/datasets/factory_log_sink_tests
+  filter: resource.type = gce_instance AND severity >= WARNING
+  include_children: true
+  bigquery_options:
+    use_partitioned_tables: true
+
+###########################################################
+# Project log sink
+###########################################################
+- project: my-single-project
+  type: sink
+  name: single-project-sink
+  destination: storage.googleapis.com/factory-log-sink-tests
+
+# You create log sinks for several resources in one single block
+# This will create one log sink for each project in the list.
+- projects: ['project-1', 'project-2']
+  type: sink
+  name: multi-project-sink
+  destination: storage.googleapis.com/factory-log-sink-tests
+
+###########################################################
+# Folder log sink
+###########################################################
+- folder: FR/IT
+  type: sink
+  name: single-folder-sink
+  destination: pubsub.googleapis.com/projects/my-project/topics/factory-log-sink-tests
+  filter: resource.type = gce_instance AND severity >= WARNING
+  include_children: true
+
+# Or even for several resources of different types.
+# This will create one log sink for each project or folder in the list.
+- folders: ['UK/Research', 'US/Research']
+  projects: ['research-project-a', 'research-project-b']
+  type: sink
+  name: research-sink
+  destination: pubsub.googleapis.com/projects/my-project/topics/factory-log-sink-tests
+  include_children: true
