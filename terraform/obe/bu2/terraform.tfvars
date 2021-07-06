@@ -1,1 +1,0 @@
-terraform_service_account = "group-creator@alpalacios-apszaz-com.iam.gserviceaccount.com"
