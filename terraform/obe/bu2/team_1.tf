@@ -10,8 +10,8 @@ resource "google_cloud_identity_group" "obe-bu2-cigroups-app1" {
   parent = "customers/C018pf49b"
 }
 
-resource "google_cloud_identity_group_membership" "cigroups-app1_leslie_lamport_apszaz_com" {
-  group = google_cloud_identity_group.cigroups-app1.id
+resource "google_cloud_identity_group_membership" "obe-bu2-cigroups-app1_leslie_lamport_apszaz_com" {
+  group = google_cloud_identity_group.obe-bu2-cigroups-app1.id
   preferred_member_key {
     id = "leslie.lamport@apszaz.com"
   }
@@ -20,8 +20,8 @@ resource "google_cloud_identity_group_membership" "cigroups-app1_leslie_lamport_
   }
 }
 
-resource "google_cloud_identity_group_membership" "cigroups-app1_robert_morris_apszaz_com" {
-  group = google_cloud_identity_group.cigroups-app1.id
+resource "google_cloud_identity_group_membership" "obe-bu2-cigroups-app1_robert_morris_apszaz_com" {
+  group = google_cloud_identity_group.obe-bu2-cigroups-app1.id
   preferred_member_key {
     id = "robert.morris@apszaz.com"
   }
@@ -30,8 +30,8 @@ resource "google_cloud_identity_group_membership" "cigroups-app1_robert_morris_a
   }
 }
 
-resource "google_cloud_identity_group_membership" "cigroups-app1_dennis_ritchie_apszaz_com" {
-  group = google_cloud_identity_group.cigroups-app1.id
+resource "google_cloud_identity_group_membership" "obe-bu2-cigroups-app1_dennis_ritchie_apszaz_com" {
+  group = google_cloud_identity_group.obe-bu2-cigroups-app1.id
   preferred_member_key {
     id = "dennis.ritchie@apszaz.com"
   }
@@ -43,8 +43,8 @@ resource "google_cloud_identity_group_membership" "cigroups-app1_dennis_ritchie_
   }
 }
 
-resource "google_cloud_identity_group_membership" "cigroups-app1_brian_kernighan_apszaz_com" {
-  group = google_cloud_identity_group.cigroups-app1.id
+resource "google_cloud_identity_group_membership" "obe-bu2-cigroups-app1_brian_kernighan_apszaz_com" {
+  group = google_cloud_identity_group.obe-bu2-cigroups-app1.id
   preferred_member_key {
     id = "brian.kernighan@apszaz.com"
   }
@@ -56,8 +56,8 @@ resource "google_cloud_identity_group_membership" "cigroups-app1_brian_kernighan
   }
 }
 
-resource "google_cloud_identity_group_membership" "cigroups-app1_donald_knuth_apszaz_com" {
-  group = google_cloud_identity_group.cigroups-app1.id
+resource "google_cloud_identity_group_membership" "obe-bu2-cigroups-app1_donald_knuth_apszaz_com" {
+  group = google_cloud_identity_group.obe-bu2-cigroups-app1.id
   preferred_member_key {
     id = "donald.knuth@apszaz.com"
   }
