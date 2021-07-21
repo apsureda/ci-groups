@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
     bucket = "tf-state-project-factory-1cea"
-    prefix = "ci_groups/obe/bu2"
+    prefix = "ci_groups/obe/bu1"
   }
 
   required_providers {

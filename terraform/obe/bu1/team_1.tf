@@ -30,6 +30,16 @@ resource "google_cloud_identity_group_membership" "obe-bu1-cigroups-app1_robert_
   }
 }
 
+resource "google_cloud_identity_group_membership" "obe-bu1-cigroups-app1_alfonso_apszaz_com" {
+  group = google_cloud_identity_group.obe-bu1-cigroups-app1.id
+  preferred_member_key {
+    id = "alfonso@apszaz.com"
+  }
+  roles {
+    name = "MEMBER"
+  }
+}
+
 resource "google_cloud_identity_group_membership" "obe-bu1-cigroups-app1_dennis_ritchie_apszaz_com" {
   group = google_cloud_identity_group.obe-bu1-cigroups-app1.id
   preferred_member_key {

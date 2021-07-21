@@ -1,2 +1,2 @@
-terraform/obe/bu1
 terraform/obe/bu2
+terraform/obe/bu1
