@@ -1,2 +1,0 @@
-terraform/obe/bu2
-terraform/obe/bu1
