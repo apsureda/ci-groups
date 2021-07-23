@@ -50,10 +50,10 @@ resource "google_cloud_identity_group_membership" "obe-bu1-cigroups-app1_ada_lov
   }
 }
 
-resource "google_cloud_identity_group_membership" "obe-bu1-cigroups-app1_random_user_apszaz_com" {
+resource "google_cloud_identity_group_membership" "obe-bu1-cigroups-app1_jamie_zawinski_apszaz_com" {
   group = google_cloud_identity_group.obe-bu1-cigroups-app1.id
   preferred_member_key {
-    id = "random.user@apszaz.com"
+    id = "jamie.zawinski@apszaz.com"
   }
   roles {
     name = "MEMBER"
